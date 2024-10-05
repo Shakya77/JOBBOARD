@@ -5,6 +5,7 @@ use App\Http\Controllers\PostJobController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\isEmployer;
+use App\Http\Middleware\isPremiumUser;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -52,4 +53,4 @@ Route::get('/pay/monthly', [SubscriptionController::class, 'initiatePayment'])->
 Route::get('/pay/yearly', [SubscriptionController::class, 'initiatePayment'])->name('pay.yearly');
 Route::get('/payment/success', [SubscriptionController::class, 'paymentSuccess'])->name('payment.success');
 Route::get('/payment/cancel', [SubscriptionController::class, 'paymentCancel'])->name('payment.cancel');
-Route::get('/job/create', [PostJobController::class, 'create'])->name('job.create');
+Route::get('/job/create', [PostJobController::class, 'create'])->middleware(isPremiumUser::class)->name('job.create');

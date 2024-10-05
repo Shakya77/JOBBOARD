@@ -1,9 +1,12 @@
 @extends('layouts.app')
-
+@section('title', 'Subscription')
 @section('content')
     <div class="container mt-5">
-        <div class="row ">
-            <div class="col ">
+        <div class="row">
+            @if (Session::has('message'))
+                <div class="alert alert-warning">{{ Session::get('message') }}</div>
+            @endif
+            <div class="col">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Weekly - $20</h5>
