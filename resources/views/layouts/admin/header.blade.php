@@ -9,6 +9,9 @@
     <meta name="author" content="" />
     <title>JOB</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script href="{{ asset('assets/demo/chart-area-demo.js') }}" rel="stylesheet"></script>
+    <script href="{{ asset('assets/demo/chart-bar-demo.js') }}" rel="stylesheet"></script>
+    <script href="{{ asset('assets/demo/chart-pie-demo.js') }}" rel="stylesheet"></script>
+    <script href="{{ asset('js/scripts.js') }}" rel="stylesheet"></script>
+    <link href="{{ asset('css/styles.css') }}" <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>

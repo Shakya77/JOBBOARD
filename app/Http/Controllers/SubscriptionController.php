@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Middleware\donotAllowUserToMakePayment;
 use App\Http\Middleware\isEmployer;
+use App\Mail\PurchaseMail;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\URL;
 use Stripe\Checkout\Session;
 use Stripe\Stripe;
@@ -21,7 +23,8 @@ class SubscriptionController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['auth', isEmployer::class, donotAllowUserToMakePayment::class]);
+        $this->middleware(['auth', isEmployer::class]);
+        $this->middleware(['auth', isEmployer::class, donotAllowUserToMakePayment::class])->except('subscribe');
     }
 
     public function subscribe()
@@ -117,6 +120,13 @@ class SubscriptionController extends Controller
             'billing_ends' => $billingEnds,
             'status' => 'paid'
         ]);
+
+        try {
+            Mail::to(auth()->user())->queue(new PurchaseMail($plan, $billingEnds));
+        } catch (\Exception $e) {
+            return response()->json();
+        }
+
         return redirect()->route('dashboard')->with('success', 'Payment was successfully processed');
     }
     public function cancel()
