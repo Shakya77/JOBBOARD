@@ -9,9 +9,40 @@
     <meta name="author" content="" />
     <title>JOB</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-    <script href="{{ asset('assets/demo/chart-area-demo.js') }}" rel="stylesheet"></script>
-    <script href="{{ asset('assets/demo/chart-bar-demo.js') }}" rel="stylesheet"></script>
-    <script href="{{ asset('assets/demo/chart-pie-demo.js') }}" rel="stylesheet"></script>
-    <script href="{{ asset('js/scripts.js') }}" rel="stylesheet"></script>
-    <link href="{{ asset('css/styles.css') }}" <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <script src="{{ url('/') }}/js/script.js"></script>
+    <link rel="stylesheet" href="{{ url('/') }}/css/styles.css" />
+    <link href="">
+
+    <style>
+        .card-counter {
+            box-shadow: 2px 2px 10px #DADADA;
+            margin: 5px;
+            padding: 20px 10px;
+            background-color: #fff;
+            height: 130px;
+            border-radius: 5px;
+            transition: .3s linear all;
+        }
+
+        .card-counter.primary {
+            background-color: #007bff;
+            color: #FFF;
+        }
+
+        .card-counter.danger {
+            background-color: #ef5350;
+            color: #FFF;
+        }
+
+        .card-counter.success {
+            background-color: #66bb6a;
+            color: #FFF;
+        }
+
+        .card-counter.info {
+            background-color: #26c6da;
+            color: #FFF;
+        }
+    </style>
 </head>
