@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('job_types');
             $table->string('address');
             $table->string('salary');
-            $table->date('application_close');
+            $table->date('application_close_date');
             $table->timestamps();
         });
     }

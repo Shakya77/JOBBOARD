@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand" href="{{ route('dashboard') }}">Navbar</a>
@@ -44,16 +43,8 @@
             </div>
         </div>
     </nav>
-
-
     @yield('content')
-
-
-
-
-
     @include('layouts.script')
-
 </body>
 
 </html>

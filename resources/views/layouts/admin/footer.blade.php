@@ -23,3 +23,4 @@
 <script src="{{ asset('assets/demo/chart-area-demo.js') }}"></script>
 <script src="{{ asset('assets/demo/chart-bar-demo.js') }}"></script>
 <script src="{{ asset('assets/demo/chart-pie-demo.js') }}"></script>
+<script src="{{ asset('js/scripts.js') }}"></script>

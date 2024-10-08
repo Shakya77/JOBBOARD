@@ -10,10 +10,8 @@
     <title>JOB</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
 
-    <script src="{{ url('/') }}/js/script.js"></script>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" href="{{ url('/') }}/css/styles.css" />
-    <link href="">
-
     <style>
         .card-counter {
             box-shadow: 2px 2px 10px #DADADA;

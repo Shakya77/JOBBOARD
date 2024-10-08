@@ -1,10 +1,10 @@
 @extends('layouts.admin.main')
 @section('content')
-    <div class="container mt-5">
-        <div class="justify-content-center row">
+    <div class="justify-content-center row">
+        <div class="col-md-10 mt-5">
+            <h1>Post a job ?</h1>
+            <div class="form-group">
 
-            <div class="col-md-8 mt-5">
-                <h1>Post a job ?</h1>
                 <form action="" method="post">
                     <div class="form-group">
                         <label for="title">Title</label>
@@ -19,24 +19,34 @@
                         <textarea name="roles" class="form-control" cols="30" rows="10"></textarea>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-control" name="job_type" id="job_type" value="fulltime">
-                        <label for="job_type">Fulltime</label>
+                        <input type="radio" class="form-check-input" name="job_type" id="fulltime" value="fulltime">
+                        <label for="fulltime">Fulltime</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-control" name="job_type" id="job_type" value="parttime">
-                        <label for="job_type">Parttime</label>
+                        <input type="radio" class="form-check-input" name="job_type" id="parttime" value="parttime">
+                        <label for="parttime">Part Time</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-control" name="job_type" id="job_type" value="casual">
-                        <label for="job_type">Casual</label>
+                        <input type="radio" class="form-check-input" name="job_type" id="casual" value="casual">
+                        <label for="casual">Casual</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-control" name="job_type" id="job_type" value="contract">
-                        <label for="job_type">Contract</label>
+                        <input type="radio" class="form-check-input" name="job_type" id="contract" value="contract">
+                        <label for="contract">Contract</label>
                     </div>
-                </form>
             </div>
-
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="date">Application closing date</label>
+                <input type="date" name="date" id="date" class="form-control">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Post a Job</button>
+            </div>
+            </form>
         </div>
     </div>
 @endsection
